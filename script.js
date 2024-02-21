@@ -3,6 +3,7 @@ const PLAYFIELD_ROWS = 20;
 const TETROMINO_NAMES = [
   'O',
   'J',
+  'L',
   'I',
   'T',
   'Z',
@@ -16,6 +17,11 @@ const TETROMINOES = {
   ],
   'J': [
     [1, 0, 0],
+    [1, 1, 1],
+    [0, 0, 0]
+  ],
+  'L': [
+    [0, 0, 1],
     [1, 1, 1],
     [0, 0, 0]
   ],
@@ -71,7 +77,7 @@ function randomInt(min, max) {
 }
 
 function generateSequence() {
-  const sequence = ['O', 'J', 'I', 'T', 'Z', 'S'];
+  const sequence = ['O', 'J', 'L', 'I', 'T', 'Z', 'S'];
 
   while (sequence.length) {
     const rand = randomInt(0, sequence.length - 1);
@@ -94,6 +100,7 @@ function generateTetromino() {
   }
 }
 
+generateSequence()
 generatePlayField();
 generateTetromino();
 const cells = document.querySelectorAll('.grid div');

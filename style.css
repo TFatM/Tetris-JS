@@ -3,7 +3,7 @@
 }
 
 body{
-  background: linear-gradient(320deg, rgb(81, 11, 97), rgb(0, 61, 152));
+  background: linear-gradient(40deg, rgb(81, 11, 97), rgb(0, 61, 152), rgb(81, 11, 97));
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@ body{
 }
 
 .grid{
-  background: rgb(140, 0, 196);
+  background: linear-gradient(rgb(140, 0, 196), rgb(29, 29, 67));
   padding: 0.5vh;
   display: grid;
   grid-template-columns: repeat(10, auto);
@@ -23,6 +23,7 @@ body{
   width: min(4vh, 7vw);
   background-color: rgba(163, 221, 240, 0.2);
   border-radius: 0.3vh;
+  border: 1px solid rgb(154, 127, 95);
 }
 
 .grid .O{
@@ -31,6 +32,10 @@ body{
 
 .grid .J{
   background-color: yellow;
+}
+
+.grid .L{
+  background-color: fuchsia;
 }
 
 .grid .I{
